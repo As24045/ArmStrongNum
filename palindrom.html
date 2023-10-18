@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number Checker</title>
+</head>
+<body>
+    <h1>Armstrong Number Checker</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput">
+    <button id="checkButton">Check</button>
+    <p id="result"></p>
+
+    <script>
+        // document.querySelector('#checkButton').addEventListener('click', function() {
+        //     const numberInput = document.querySelector('#numberInput').value;
+        //     const resultElement = document.querySelector('#result');
+            
+        //     if (isArmstrongNumber(numberInput)) {
+        //         resultElement.textContent = `${numberInput} is an Armstrong number!`;
+        //     } else {
+        //         resultElement.textContent = `${numberInput} is not an Armstrong number.`;
+        //     }
+        // });
+
+        // function isArmstrongNumber(number) {
+        //     const numStr = number.toString();
+        //     const numDigits = numStr.length;
+        //     let sum = 0;
+
+        //     for (let i = 0; i < numDigits; i++) {
+        //         const digit = parseInt(numStr[i]);
+        //         sum += Math.pow(digit, numDigits);
+        //     }
+
+        //     return sum === parseInt(number);
+        // }
+
+        // document.querySelector("#checkButton").addEventListener('click', function () {
+            
+        //     const numberInput = document.querySelector("#numberInput").value;
+        //     const resultElement = document.querySelector('#result');
+
+        //     if (isArmstrongNumber(numberInput)) {
+        //         resultElement.textContent = `${numberInput} is an Armstrong number!`;
+        //     }
+        //     else{
+        //         resultElement.textContent = `${numberInput} is not a Armstrong Number`;
+        //     }
+
+        // });
+        // function isArmstrongNumber(number) {
+        //    const numStr = number.toString();
+        //    const numDigits = numStr.length;
+           
+        //    let sum = 0;
+
+        //    for (let i = 0; i < numDigits; i++) {
+        //     const digit = parseInt(numStr[i]);
+        //     sum += Math.pow(digit, numDigits);
+        //    }
+        //    return sum === parseInt(number);
+        // }
+
+        document.querySelector("#checkButton").addEventListener('click', () => {
+            
+               const numberInput = document.querySelector("#numberInput").value;
+            const resultElement = document.querySelector('#result');
+
+            if (isArmstrongNumber(numberInput)) {
+                resultElement.textContent = `${numberInput} is an Armstrong number!`;
+            }
+            else{
+                resultElement.textContent = `${numberInput} is not a Armstrong Number`;
+            }
+
+        });
+        function isArmstrongNumber(number) {
+           const numStr = number.toString();
+           const numDigits = numStr.length;
+           
+           let sum = 0;
+
+           for (let i = 0; i < numDigits; i++) {
+            const digit = parseInt(numStr[i]);
+            sum += Math.pow(digit, numDigits);
+           }
+           return sum === parseInt(number);
+        }
+
+    </script>
+</body>
+</html>
